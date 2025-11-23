@@ -1,0 +1,606 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lexend", sans-serif;
+  text-decoration: none;
+}
+
+:root {
+  --border-color: rgba(239, 239, 239, 1);
+  --gray-text: rgba(112, 115, 124, 1);
+  --hero-box: rgba(234, 241, 235, 1);
+  --primary-color: rgba(53, 151, 64, 1);
+  --hover-color: rgba(40, 120, 50, 1);
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+header {
+  box-shadow: 0px 16px 16px -16px rgba(0, 0, 0, 0.26);
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.header-nav a {
+  color: var(--gray-text);
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.header-nav a:hover {
+  color: var(--primary-color);
+}
+
+.header-nav a:not(:first-child) {
+  border-left: 1px solid var(--border-color);
+  padding-left: 2rem;
+}
+
+.header-search {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header-search input {
+  width: 250px;
+  padding: 0.8rem 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  outline: none;
+  background-color: transparent;
+  color: var(--gray-text);
+  border-radius: 70px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.header-search input:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(53, 151, 64, 0.2);
+}
+
+.header-cart {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header-cart a {
+  transition: transform 0.3s ease;
+}
+
+.header-cart a:hover {
+  transform: scale(1.1);
+}
+
+.hero-box {
+  background-color: var(--hero-box);
+  padding: 2rem;
+  border-radius: 10px;
+  margin: 2rem 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.hero-text h2 {
+  font-size: 48px;
+}
+
+.hero-text p {
+  font-size: 16px;
+  color: rgba(31, 37, 51, 1);
+  width: 65%;
+  line-height: 25px;
+}
+
+.hero-price {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 20px;
+}
+
+.actual-price {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.actual-price h3 {
+  font-size: 42px;
+  color: rgba(31, 37, 51, 1);
+}
+
+.old-price h4 {
+  color: rgba(112, 115, 124, 1);
+  font-size: 22px;
+  text-decoration: line-through;
+}
+
+.hero-btn {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.hero-btn button {
+  padding: 14px 33px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.add-to-card {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.add-to-card:hover {
+  background-color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: rgba(53, 151, 64, 1);
+}
+
+.discover {
+  background-color: white;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+
+.discover:hover {
+  background-color: var(--primary-color);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hero-seeds {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: rgba(255, 230, 46, 0.09);
+  padding: 1rem 2rem;
+}
+
+.seed-text {
+  text-align: center;
+}
+
+.seed-text h2 {
+  font-size: 1.7rem;
+  color: rgba(31, 37, 51, 1);
+}
+
+.seed-text p {
+  font-size: 1rem;
+  color: rgba(112, 115, 124, 1);
+}
+
+.seed-4 {
+  position: relative;
+  top: 20px;
+  left: -40px;
+}
+
+.seed-3 {
+  position: relative;
+  top: -20px;
+  left: 50px;
+}
+
+.seed-1 {
+  position: relative;
+  top: -10px;
+  left: -20px;
+}
+
+.products-section {
+  margin-top: 40px;
+}
+
+.products-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.products-title h2 {
+  font-size: 2rem;
+  color: rgba(31, 37, 51, 1);
+}
+
+.products-title button {
+  background-color: transparent;
+  border: 1px solid rgba(239, 239, 239, 1);
+  cursor: pointer;
+  font-size: 1rem;
+  color: var(--primary-color);
+  transition: color 0.3s ease;
+  transition: all 0.3s ease;
+  padding: 11px 33px;
+  border-radius: 8px;
+}
+.products-title button:hover {
+  color: white;
+  background-color: var(--primary-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.products-filter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.products-filter button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 20px 40px;
+  background-color: white;
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 500;
+  color: var(--gray-text);
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.products-filter button:hover {
+  background-color: var(--hero-box);
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.products-filter button img {
+  width: 20px;
+  height: 20px;
+}
+
+.product-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+  margin-top: 80px;
+}
+
+.card {
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+  padding: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.product-img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.star {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 8px 0;
+}
+
+.starImg {
+  width: 50px;
+  height: 50px;
+}
+
+.card-price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 12px;
+}
+
+.card-price h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+}
+
+.card-price button {
+  background-color: transparent;
+  border: 1px solid rgba(239, 239, 239, 1);
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.card-price button img {
+  width: 22px;
+  height: 22px;
+}
+
+.card-description {
+  margin-top: 10px;
+  color: var(--gray-text);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.loader {
+  position: absolute;
+  top: 90%;
+  margin-left: -50px;
+  left: 50%;
+  animation: speeder 0.4s linear infinite;
+}
+.loader > span {
+  height: 5px;
+  width: 35px;
+  background: #000;
+  position: absolute;
+  top: -19px;
+  left: 60px;
+  border-radius: 2px 10px 1px 0;
+}
+.base span {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 6px solid transparent;
+  border-right: 100px solid #000;
+  border-bottom: 6px solid transparent;
+}
+.base span:before {
+  content: "";
+  height: 22px;
+  width: 22px;
+  border-radius: 50%;
+  background: #000;
+  position: absolute;
+  right: -110px;
+  top: -16px;
+}
+.base span:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 0 solid transparent;
+  border-right: 55px solid #000;
+  border-bottom: 16px solid transparent;
+  top: -16px;
+  right: -98px;
+}
+.face {
+  position: absolute;
+  height: 12px;
+  width: 20px;
+  background: #000;
+  border-radius: 20px 20px 0 0;
+  transform: rotate(-40deg);
+  right: -125px;
+  top: -15px;
+}
+.face:after {
+  content: "";
+  height: 12px;
+  width: 12px;
+  background: #000;
+  right: 4px;
+  top: 7px;
+  position: absolute;
+  transform: rotate(40deg);
+  transform-origin: 50% 50%;
+  border-radius: 0 0 0 2px;
+}
+.loader > span > span:nth-child(1),
+.loader > span > span:nth-child(2),
+.loader > span > span:nth-child(3),
+.loader > span > span:nth-child(4) {
+  width: 30px;
+  height: 1px;
+  background: #000;
+  position: absolute;
+  animation: fazer1 0.2s linear infinite;
+}
+.loader > span > span:nth-child(2) {
+  top: 3px;
+  animation: fazer2 0.4s linear infinite;
+}
+.loader > span > span:nth-child(3) {
+  top: 1px;
+  animation: fazer3 0.4s linear infinite;
+  animation-delay: -1s;
+}
+.loader > span > span:nth-child(4) {
+  top: 4px;
+  animation: fazer4 1s linear infinite;
+  animation-delay: -1s;
+}
+@keyframes fazer1 {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -80px;
+    opacity: 0;
+  }
+}
+@keyframes fazer2 {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -100px;
+    opacity: 0;
+  }
+}
+@keyframes fazer3 {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -50px;
+    opacity: 0;
+  }
+}
+@keyframes fazer4 {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -150px;
+    opacity: 0;
+  }
+}
+@keyframes speeder {
+  0% {
+    transform: translate(2px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -3px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-2px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 3px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-1px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-2px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(2px, 1px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
+.longfazers {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.longfazers span {
+  position: absolute;
+  height: 2px;
+  width: 20%;
+  background: #000;
+}
+.longfazers span:nth-child(1) {
+  top: 20%;
+  animation: lf 0.6s linear infinite;
+  animation-delay: -5s;
+}
+.longfazers span:nth-child(2) {
+  top: 40%;
+  animation: lf2 0.8s linear infinite;
+  animation-delay: -1s;
+}
+.longfazers span:nth-child(3) {
+  top: 60%;
+  animation: lf3 0.6s linear infinite;
+}
+.longfazers span:nth-child(4) {
+  top: 80%;
+  animation: lf4 0.5s linear infinite;
+  animation-delay: -3s;
+}
+@keyframes lf {
+  0% {
+    left: 200%;
+  }
+  100% {
+    left: -200%;
+    opacity: 0;
+  }
+}
+@keyframes lf2 {
+  0% {
+    left: 200%;
+  }
+  100% {
+    left: -200%;
+    opacity: 0;
+  }
+}
+@keyframes lf3 {
+  0% {
+    left: 200%;
+  }
+  100% {
+    left: -100%;
+    opacity: 0;
+  }
+}
+@keyframes lf4 {
+  0% {
+    left: 200%;
+  }
+  100% {
+    left: -100%;
+    opacity: 0;
+  }
+}
+.longfazers {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
