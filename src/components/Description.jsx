@@ -25,18 +25,16 @@ const Description = () => {
             <p>
               Be sure of our quality - the freshest batches of this season.
               Non-GMO, Heirloom - our seeds were tested and have the best
-              germination ratings.
-            </p>
-
-            <p>
-              Spinach commom culinary uses: salads, soups, smoothies, lasagne,
-              pizza, pies, risotto, and more
+              germination ratings. Spinach commom culinary uses: salads, soups,
+              smoothies, lasagne, pizza, pies, risotto, and more
             </p>
 
             <p>
               Proudly sourced in the USA - our garden seeds are grown,
               harvested, and packaged in the USA. We support local farmers and
-              are happy to produce this American-made product
+              are happy to produce this American-made product. SEEDRA Spinach
+              Seeds - contains 600 seeds in 2 Packs and professional
+              instructions created by PhD Helga George
             </p>
           </div>
 
