@@ -1027,3 +1027,20 @@ footer {
 .footer-copyright p {
   color: rgba(112, 115, 124, 1);
 }
+
+.error {
+  background: #ffecec;
+  border: 1px solid #ffb3b3;
+  color: #d90000;
+  padding: 12px 16px;
+  border-radius: 10px;
+  margin-top: 20px;
+  font-size: 14px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.error p {
+  margin: 0;
+  font-weight: 500;
+}

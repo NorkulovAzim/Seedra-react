@@ -16,7 +16,6 @@ const Products = ({ searchTerm = "" }) => {
   const [allProducts, setAllProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [initialLoading, setInitialLoading] = useState(true);
 
   const filteredProducts = useMemo(() => {
     if (searchTerm.trim() === "") {
@@ -34,19 +33,17 @@ const Products = ({ searchTerm = "" }) => {
     const fetchProducts = async () => {
       try {
         setLoading(true);
-        setInitialLoading(true);
 
         const response = await fetch("https://dummyjson.com/products");
         const data = await response.json();
         setAllProducts(data.products.slice(0, 20));
 
+        // Simulate network delay to see skeleton loading
         setTimeout(() => {
-          setInitialLoading(false);
           setLoading(false);
-        }, 1000);
+        }, 1500);
       } catch (err) {
         setError(err.message);
-        setInitialLoading(false);
         setLoading(false);
       }
     };
@@ -54,26 +51,7 @@ const Products = ({ searchTerm = "" }) => {
     fetchProducts();
   }, []);
 
-  if (initialLoading) {
-    return (
-      <div className="products-loader">
-        <div className="loader">
-          <span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-          </span>
-          <div className="base">
-            <span></span>
-            <div className="face"></div>
-          </div>
-        </div>
-      </div>
-    );
-  }
-
-  if (loading && !initialLoading) {
+  if (loading) {
     return (
       <section className="products-section">
         <div className="container">
@@ -142,7 +120,7 @@ const Products = ({ searchTerm = "" }) => {
             <h2>Our products.</h2>
             <button>View all</button>
           </div>
-          <div className="product-cards">
+          <div className="error">
             <p>Error: {error}</p>
           </div>
         </div>

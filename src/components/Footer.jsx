@@ -27,8 +27,6 @@ const Footer = () => {
           </nav>
         </div>
 
-        {/* <hr /> */}
-
         <div className="footer-bottom">
           <div className="footer-social">
             <NavLink to="/">
