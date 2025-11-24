@@ -38,7 +38,7 @@ const Products = ({ searchTerm = "" }) => {
 
         const response = await fetch("https://dummyjson.com/products");
         const data = await response.json();
-        setAllProducts(data.products.slice(0, 20)); // Get more products for search
+        setAllProducts(data.products.slice(0, 20));
 
         setTimeout(() => {
           setInitialLoading(false);

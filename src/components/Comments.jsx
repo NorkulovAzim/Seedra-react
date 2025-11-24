@@ -2,10 +2,11 @@ import React from "react";
 
 const Comments = () => {
   return (
-    <div className="container">
-      <h2>User Comments</h2>
-      <p>See what our users are saying.</p>
-    </div>
+    <section className="comments-section">
+      <div className="container">
+        <h2 className="comments-title">What out clients say</h2>
+      </div>
+    </section>
   );
 };
 
