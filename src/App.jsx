@@ -4,6 +4,7 @@ import Hero from "./components/Hero";
 import Products from "./components/Products";
 import Blog from "./components/Blog";
 import Comments from "./components/Comments";
+import Description from "./components/Description";
 
 import "./App.css";
 
@@ -20,6 +21,7 @@ const App = () => {
       <Products searchTerm={searchTerm} />
       <Blog />
       <Comments />
+      <Description />
     </Layout>
   );
 };
