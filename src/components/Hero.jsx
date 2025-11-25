@@ -7,17 +7,18 @@ import Seed1 from "../assets/seed1.png";
 import Seed2 from "../assets/seed2.png";
 import Seed3 from "../assets/seed3.png";
 import Seed4 from "../assets/seed4.png";
+
 const Hero = () => {
   return (
-    <section className="hero-section">
+    <section className="hero-section" data-aos="fade-up">
       <div className="container">
         <div className="hero-box">
-          <div className="hero-left">
+          <div className="hero-left" data-aos="fade-right">
             <div className="hero-text">
-              <h2>
+              <h2 data-aos="fade-down">
                 SEEDRA Basil Seeds for <br /> Indoor and Outdoor Planting
               </h2>
-              <p>
+              <p data-aos="fade-up" data-aos-delay="200">
                 Be sure of our quality - the freshest batches of this season.
                 Non-GMO, Heirloom - our seeds were tested and have the best
                 germination ratings. Your easy growing experience is our
@@ -25,7 +26,7 @@ const Hero = () => {
               </p>
             </div>
 
-            <div className="hero-price">
+            <div className="hero-price" data-aos="fade-up" data-aos-delay="400">
               <div className="actual-price">
                 <img src={FireImg} alt="" />
                 <h3>$12.56</h3>
@@ -35,18 +36,18 @@ const Hero = () => {
               </div>
             </div>
 
-            <div className="hero-btn">
+            <div className="hero-btn" data-aos="fade-up" data-aos-delay="600">
               <button className="add-to-card">Add to card</button>
               <button className="discover">Discover</button>
             </div>
           </div>
 
-          <div className="hero-right">
+          <div className="hero-right" data-aos="fade-left">
             <img src={HeroImg} alt="" />
           </div>
         </div>
 
-        <div className="hero-seeds">
+        <div className="hero-seeds" data-aos="zoom-in-up" data-aos-delay="800">
           <div className="seed-img">
             <img className="seed-1" src={Seed1} alt="" />
             <img className="seed-3" src={Seed3} alt="" />

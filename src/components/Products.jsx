@@ -38,7 +38,6 @@ const Products = ({ searchTerm = "" }) => {
         const data = await response.json();
         setAllProducts(data.products.slice(0, 20));
 
-        // Simulate network delay to see skeleton loading
         setTimeout(() => {
           setLoading(false);
         }, 1500);
@@ -53,14 +52,14 @@ const Products = ({ searchTerm = "" }) => {
 
   if (loading) {
     return (
-      <section className="products-section">
+      <section className="products-section" data-aos="fade-up">
         <div className="container">
-          <div className="products-title">
+          <div className="products-title" data-aos="fade-right">
             <h2>Our products.</h2>
             <button>View all</button>
           </div>
 
-          <div className="products-filter">
+          <div className="products-filter" data-aos="fade-left">
             <button>
               <img src={ProductLeaf} alt="" />
               All
@@ -93,7 +92,12 @@ const Products = ({ searchTerm = "" }) => {
 
           <div className="product-cards">
             {Array.from({ length: 12 }).map((_, index) => (
-              <div className="card" key={index}>
+              <div
+                className="card"
+                key={index}
+                data-aos="zoom-in"
+                data-aos-delay={index * 50}
+              >
                 <Skeleton width="100%" height={200} />
                 <div className="star">
                   <Skeleton width={60} height={20} />
@@ -114,9 +118,9 @@ const Products = ({ searchTerm = "" }) => {
 
   if (error) {
     return (
-      <section className="products-section">
+      <section className="products-section" data-aos="fade-up">
         <div className="container">
-          <div className="products-title">
+          <div className="products-title" data-aos="fade-right">
             <h2>Our products.</h2>
             <button>View all</button>
           </div>
@@ -129,14 +133,14 @@ const Products = ({ searchTerm = "" }) => {
   }
 
   return (
-    <section className="products-section">
+    <section className="products-section" data-aos="fade-up">
       <div className="container">
-        <div className="products-title">
+        <div className="products-title" data-aos="fade-right">
           <h2>Our products.</h2>
           <button>View all</button>
         </div>
 
-        <div className="products-filter">
+        <div className="products-filter" data-aos="fade-left">
           <button>
             <img src={ProductLeaf} alt="" />
             All
@@ -168,8 +172,13 @@ const Products = ({ searchTerm = "" }) => {
         </div>
 
         <div className="product-cards">
-          {filteredProducts.map((product) => (
-            <div className="card" key={product.id}>
+          {filteredProducts.map((product, index) => (
+            <div
+              className="card"
+              key={product.id}
+              data-aos="zoom-in"
+              data-aos-delay={index * 50}
+            >
               <img
                 className="product-img"
                 src={product.thumbnail}

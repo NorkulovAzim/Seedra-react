@@ -5,15 +5,15 @@ import Female from "../assets/female.png";
 
 const Blog = () => {
   return (
-    <section className="blog-section">
+    <section className="blog-section" data-aos="fade-up">
       <div className="container">
-        <div className="blog-title">
+        <div className="blog-title" data-aos="fade-right">
           <h2>Our blog.</h2>
           <button>Go to our blog</button>
         </div>
 
         <div className="parent">
-          <div className="div1">
+          <div className="div1" data-aos="flip-left" data-aos-delay="100">
             <div className="blog-wrap">
               <div className="time-blog">
                 <img src={ClockImg} alt="clock" />
@@ -36,7 +36,7 @@ const Blog = () => {
               <img src={BlogGreen} alt="" />
             </div>
           </div>
-          <div className="div2">
+          <div className="div2" data-aos="flip-left" data-aos-delay="200">
             <div className="blog-wrap-1">
               <div className="blog-time-1">
                 <img src={ClockImg} alt="" />
@@ -56,7 +56,7 @@ const Blog = () => {
               <img className="ellipse" src={Ellipse} alt="" />
             </div>
           </div>
-          <div className="div3">
+          <div className="div3" data-aos="flip-left" data-aos-delay="300">
             {" "}
             <div className="blog-wrap-1">
               <div className="blog-time-1">
@@ -76,7 +76,7 @@ const Blog = () => {
               <img className="ellipse" src={Ellipse} alt="" />
             </div>
           </div>
-          <div className="div5">
+          <div className="div5" data-aos="flip-left" data-aos-delay="400">
             <div className="blog-time-2">
               <img src={ClockImg} alt="" />
               <p>12.09.2021</p>
